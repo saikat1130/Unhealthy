@@ -1,0 +1,484 @@
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+
+	<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators-->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="4" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="5" class=""></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Big
+							<span>Save</span>
+						</h3>
+						<p>Get flat
+							<span>10%</span> Cashback</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+			<div class="item item2">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Healthy
+							<span>Saving</span>
+						</h3>
+						<p>Get Upto
+							<span>30%</span> Off</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+			<div class="item item3">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Big
+							<span>Deal</span>
+						</h3>
+						<p>Get Best Offer Upto
+							<span>20%</span>
+						</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+			<div class="item item4">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Today
+							<span>Discount</span>
+						</h3>
+						<p>Get Now
+							<span>40%</span> Discount</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+			<div class="item item5">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Today
+							<span>Discount</span>
+						</h3>
+						<p>Get Now
+							<span>40%</span> Discount</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+			<div class="item item6">
+				<div class="container">
+					<div class="carousel-caption">
+						<h3>Today
+							<span>Discount</span>
+						</h3>
+						<p>Get Now
+							<span>40%</span> Discount</p>
+						<a class="button2" href="product.html">Shop Now </a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<!-- //banner -->
+
+	<!-- top Products -->
+	<div class="ads-grid">
+		<div class="container" >
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l">Our Best Products
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- //tittle heading -->
+			<!-- product right -->
+			<div class="agileinfo-ads-display col-md-12">
+				<div class="wrapper">
+					<!-- first section (nuts) -->
+					<div class="product-sec1">
+						<h3 class="heading-tittle"></h3>
+						<div class="col-md-4 product-men" *ngFor="let c of allpro">
+
+
+
+
+							<div class="modal" [id]="'myModal'+c._id" tabindex="-1" role="dialog">
+								<div class="modal-dialog" role="document">
+								  <div class="modal-content">
+									<div class="modal-header">
+									  <h2 class="modal-title">{{c.pname}}</h2>
+									  <h4 class="modal-title">₹ {{c.pprice}}</h4>
+									  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									<div class="modal-body">
+										<img [src]="'http://localhost:2000/product_img/' + c.pimg"  alt="" style="width:100%;  height: 100%;">
+									    <p [innerHTML]="c.pd" style="color:#000; text-align: center;"> </p>
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-primary">Order Now <br><a href="tel:9876765678">9083600086</a></button>
+									  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								</div>
+							  </div>
+
+
+
+
+
+
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+
+									<img [src]="'http://localhost:2000/product_img/' + c.pimg"  alt="" style="width: 285px;  height: 240px; border-radius: 10px;">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a data-toggle="modal" [attr.data-target]="'#myModal'+c._id" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a data-toggle="modal" [attr.data-target]="'#myModal'+c._id" >{{c.pname}}</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">₹ {{c.finalprice}}</span>
+										<del>{{c.pprice}}</del>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										 <!-- <form data-toggle="modal" [attr.data-target]="'#myModal'+c._id" type="button">
+											<fieldset>
+												<input type="submit" name="submit" value="Order Now" class="button" style="border-radius: 30px;" /><br>
+											</fieldset>
+										</form>  -->
+										<button data-toggle="modal" [attr.data-target]="'#myModal'+c._id" class="button" style="border-radius: 30px;" >Order</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //product right -->
+		</div>
+	</div>
+	<!-- //top products -->
+
+					<!-- second section (nuts special) -->
+					<div class="product-sec1 product-sec2" style="margin: 60px;">
+						<div class="col-xs-7 effect-bg">
+							<h3 class="">Special September Offer</h3>
+							<h6>Enjoy Our Pure Veg Dishes</h6>
+							<p>Get Extra 20% Off</p>
+						</div>
+						<h4 class="w3l-nut-middle">Ǖnɦealthy</h4>
+						<div class="col-xs-5 bg-right-nut">
+							<img src="assets/images/logo2.png" alt="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<!-- //second section (nuts special) -->
+
+
+	<!-- special offers -->
+	<div class="featured-section" id="projects">
+		<div class="container">
+			<!-- tittle heading -->
+			<h3 class="tittle-w3l">Special Offers
+				<span class="heading-style">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</h3>
+			<!-- //tittle heading -->
+			<div class="agileinfo-ads-display col-md-12">
+				<div class="wrapper">
+					<!-- first section (nuts) -->
+					<div class="product-sec1">
+						<h3 class="heading-tittle"></h3>
+						<div class="col-md-4 product-men" *ngFor="let c of allpro">
+
+
+
+							<div class="modal" [id]="'myModal'+c._id" tabindex="-1" role="dialog">
+								<div class="modal-dialog" role="document">
+								  <div class="modal-content">
+									<div class="modal-header">
+										<h2 class="modal-title">{{c.pname}}</h2>
+										<h4 class="modal-title">₹ {{c.pprice}}</h4>
+									  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									  </button>
+									</div>
+									<div class="modal-body">
+										<img [src]="'http://localhost:2000/product_img/' + c.pimg"  alt="" style="width: 100%;  height: 100%;">
+									  <p [innerHTML]="c.pd"> </p>
+
+									</div>
+									<div class="modal-footer">
+									  <button type="button" class="btn btn-primary">Order Now <br></button>
+									  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								  </div>
+								</div>
+							  </div>
+
+
+
+
+							<div class="men-pro-item simpleCart_shelfItem">
+								<div class="men-thumb-item">
+									<img [src]="'http://localhost:2000/product_img/' + c.pimg"  alt="" style="width: 285px;  height: 240px; border-radius: 10px;">
+									<div class="men-cart-pro">
+										<div class="inner-men-cart-pro">
+											<a data-toggle="modal" [attr.data-target]="'#myModal'+c._id" class="link-product-add-cart">Quick View</a>
+										</div>
+									</div>
+								</div>
+								<div class="item-info-product ">
+									<h4>
+										<a data-toggle="modal" [attr.data-target]="'#myModal'+c._id" >{{c.pname}}</a>
+									</h4>
+									<div class="info-product-price">
+										<span class="item_price">₹ {{c.finalprice}}</span>
+										<del>{{c.pprice}}</del>
+									</div>
+									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+										<button data-toggle="modal" [attr.data-target]="'#myModal'+c._id" class="button" style="border-radius: 30px;" >Order</button>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //special offers -->
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<!-- footer first section -->
+			<p class="footer-main">
+				<span style="color: crimson;">"Unhealthy"</span> Welcome to Unhealthy, where culinary temptation meets guilt-free satisfaction! Embark on a delectable journey that celebrates the art of indulgence without remorse. Our restaurant boasts an exceptional array of dishes that redefine comfort food, merging irresistible flavors with a modern twist. At Unhealthy, we encourage you to savor every moment, from the first bite of our decadent creations to the last lingering taste of delight. Indulge in your guilty pleasures with a dash of sophistication, as we craft an unforgettable dining experience that leaves you craving more. It's time to succumb to extraordinary flavors and relish the joy of guilt-free enjoyment!</p>
+			<!-- //footer first section -->
+			<!-- footer second section -->
+			<div class="w3l-grids-footer">
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-map-marker" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Inventive Guilty Pleasures</h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-refresh" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Wholesome Ingredients, Uncompromised Flavor</h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-xs-4 offer-footer">
+					<div class="col-xs-4 icon-fot">
+						<span class="fa fa-times" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-8 text-form-footer">
+						<h3>Lively Ambience of Indulgence</h3>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- //footer second section -->
+			<!-- footer third section -->
+			<div class="footer-info w3-agileits-info">
+				<!-- footer categories -->
+				<div class="col-sm-5 address-right">
+					<div class="col-xs-6 footer-grids">
+						<h3>Categories</h3>
+						<ul>
+							<li *ngFor = "let c of allcat">
+								<a>{{c.categoryname}}</a>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- //footer categories -->
+				<!-- quick links -->
+				<div class="col-sm-5 address-right">
+					<div class="col-xs-6 footer-grids">
+						<h3>Quick Links</h3>
+						<ul>
+							<li>
+								<a href="about.html">About Us</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact Us</a>
+							</li>
+							<li>
+								<a href="help.html">Help</a>
+							</li>
+							<li>
+								<a href="faqs.html">Faqs</a>
+							</li>
+							<li>
+								<a href="terms.html">Terms of use</a>
+							</li>
+							<li>
+								<a href="privacy.html">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 footer-grids">
+						<h3>Get in Touch</h3>
+						<ul>
+							<li>
+								<i class="fa fa-map-marker"></i>Baruipur, Kolkata</li>
+							<li>
+								<i class="fa fa-mobile"></i> +91 9083600086</li>
+							<li>
+								<i class="fa fa-phone"></i> +222 11 4444 </li>
+							<li>
+								<i class="fa fa-envelope-o"></i>
+								<a href="mailto:example@mail.com"> saikatbhattacharjee763@example.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //quick links -->
+				<!-- social icons -->
+				<div class="col-sm-2 footer-grids  w3l-socialmk">
+					<h3>Follow Us on</h3>
+					<div class="social">
+						<ul>
+							<li>
+								<a class="icon in" href="https://instagram.com/saika.t_?igshid=ZDdkNTZiNTM=">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</li>
+							<li>
+								<a class="icon fb" href="https://www.facebook.com/saikat.bhattacharya.90038">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a class="icon tw" href="https://www.linkedin.com/in/saikat-bhattacharya-11a1781b7">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a class="icon gp" href="#">
+									<i class="fa fa-google-plus"></i>
+								</a>
+							</li>
+							<li>
+								<a class="icon gt" href="https://github.com/saikat1130/">
+									<i class="fa fa-github"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="agileits_app-devices">
+						<h5>Download the App</h5>
+						<a href="#">
+							<img src="assets/images/1.png" alt="">
+						</a>
+						<a href="#">
+							<img src="assets/images/2.png" alt="">
+						</a>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!-- //social icons -->
+				<div class="clearfix"></div>
+			</div>
+			<!-- //footer third section -->
+			<!-- footer fourth section (text) -->
+			<div class="agile-sometext">
+				<!-- payment -->
+				<div class="sub-some child-momu">
+					<h5>Payment Method</h5>
+					<ul>
+						<li>
+							<img src="assets/images/pay2.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay5.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay1.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay4.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay6.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay3.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay7.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay8.png" alt="">
+						</li>
+						<li>
+							<img src="assets/images/pay9.png" alt="">
+						</li>
+					</ul>
+				</div>
+				<!-- //payment -->
+			</div>
+			<!-- //footer fourth section (text) -->
+		</div>
+	</footer>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copy-right">
+		<div class="container">
+			<p>© 2023 Unhealthy. All rights reserved | Design by <span>Saikat Bhattacharjee</span>
+			</p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+												<!-- <input type="submit" name="submit" value="Order Now" class="button" style="border-radius: 30px; background-color: #ae4b00"/> -->

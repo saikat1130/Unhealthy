@@ -1,0 +1,14 @@
+
+
+				<div class="agileits_search" >
+					<form action="/" method="post">
+						<input  #s type="text" placeholder="search your foods here..." (keyup.enter)="search(s.value)" [value]="searchTerm" style="width:40rem;">
+						<button  (click)="search(s.value)" type="submit" class="btn btn-default" aria-label="Left Align">
+							<span class="fa fa-search" aria-hidden="true"> </span>
+						</button>
+					</form>
+				</div>
+			
+
+
+
